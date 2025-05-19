@@ -25,3 +25,11 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.base-icon {
+  ::v-deep svg {
+    width: 100%;
+  }
+}
+</style>

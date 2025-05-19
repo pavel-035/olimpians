@@ -11,7 +11,7 @@
           <b-img :src="require('/src/assets/images/logo.png')" />
         </router-link>
       </div>
-      <a href="tel:+30922040281" class="text-white raleway-regular">+30922040281</a>
+      <b-link href="tel:+30922040281" class="text-white raleway-regular">+30922040281</b-link>
       <b-nav class="justify-content-center p-0">
         <b-nav-item link-classes="p-0 ml-5 text-white raleway-regular">Главная</b-nav-item>
         <b-nav-item link-classes="p-0 ml-5 text-white raleway-regular">Каталог</b-nav-item>
