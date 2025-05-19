@@ -52,12 +52,12 @@
           <b-form-input
             id="subscribe"
             required
-            class="subscribe__input border-1 rounded-0 border-dark mr-3 px-3 py-4"
+            class="subscribe__input border-3 rounded-0 border-dark mr-3 px-3 py-4"
           ></b-form-input>
           <b-button
             type="submit"
             variant="transparent"
-            class="subscribe__button border-1 rounded-0 border-dark px-5 text-uppercase"
+            class="subscribe__button border-3 rounded-0 border-dark px-5 text-uppercase"
           >Отправить</b-button>
         </b-form>
       </div>
@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  background: url("/src/assets/images/banner_background.png") no-repeat 50% 50%/cover;
+  background: url("/src/assets/images/banner_background.png") no-repeat 50% 20%/cover;
   &__heading {
     font-size: 80px;
     line-height: 120px;

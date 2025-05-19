@@ -1,10 +1,11 @@
 <template>
-  <b-container class="bg-primary" fluid>
+  <div class="bg-primary" fluid>
     <div class="
       d-flex
       justify-content-between
       align-items-center
-      py-3
+      py-4
+      px-5
     ">
       <div>
         <router-link to="/">
@@ -18,7 +19,7 @@
         <b-nav-item link-classes="p-0 ml-5 text-white raleway-regular">Корзина</b-nav-item>
       </b-nav>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>

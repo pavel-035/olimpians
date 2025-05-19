@@ -1,5 +1,5 @@
 <template>
-  <b-card class="selection-card border-dark rounded-0 p-0">
+  <b-card class="selection-card border border-dark rounded-0 p-0">
     <b-card-img
       :src="require('/src/assets/images/book.png')"
       class="selection-card__img mb-4"
