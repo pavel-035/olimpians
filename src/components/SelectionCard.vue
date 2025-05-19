@@ -32,26 +32,30 @@ export default {
 
 <style lang="scss" scoped>
 .selection-card {
+  max-width: 100%;
+  margin: 0 auto;
+
   &__img {
-    max-width: 200px;
+    max-width: 132px;
   }
 
   &__title {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 27px;
   }
   &__subtitle {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   &__price {
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 22px;
+    line-height: 33px;
   }
 
   &__button {
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
@@ -61,35 +65,34 @@ export default {
     margin: 0 auto;
   }
 }
+
 @media screen and (min-width: 992px) {
   .selection-card {
     max-width: 100%;
     margin: 0 auto;
+
+    &__img {
+      max-width: 200px;
+    }
+
     &__title {
-      font-size: 18px;
-      line-height: 27px;
-    }
-    &__subtitle {
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    &__price {
-      font-size: 22px;
-      line-height: 33px;
-    }
-
-    &__button {
       font-size: 24px;
       line-height: 36px;
     }
-  }
-}
+    &__subtitle {
+      font-size: 18px;
+      line-height: 27px;
+    }
 
-@media screen and (min-width: 1200px) {
-  .selection-card {
-    max-width: 100%;
-    margin: 0 auto;
+    &__price {
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    &__button {
+      font-size: 30px;
+      line-height: 45px;
+    }
   }
 }
 </style>

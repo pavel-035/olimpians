@@ -12,10 +12,23 @@ $primary: #1596C1;
 }
 
 .app-container {
-  max-width: 1258px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 0 34px;
+  padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+  .app-container {
+    padding: 0 34px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-container {
+    max-width: 1370px;
+    padding: 0 70px;
+  }
 }
 
 /* Small devices (sm, ≥576px) */

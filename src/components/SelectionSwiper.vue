@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div class="selection-swiper__nav my-5 py-5">
+    <div class="selection-swiper__nav">
       <div class="selection-swiper__prev">
         <b-button
           class="p-0"
@@ -105,14 +105,25 @@ export default {
     }
   }
 
+  &__carousel {
+    max-width: 100%;
+    width: 100%;
+  }
+
   &__nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: 138px;
+    margin-top: 40px;
   }
   &__next,
   &__prev {
-    max-width: 50px;
+    max-width: 40px;
+    &_md {
+      display: none;
+      max-width: 100px;
+    }
   }
 
   &__next {
@@ -123,24 +134,7 @@ export default {
   }
 
   &__pagination {
-    width: fit-content;
-    display: flex;
-    column-gap: 55px;
-  }
-  ::v-deep {
-    .selection-swiper__bullet {
-      display: block;
-      width: 30px;
-      height: 30px;
-
-      border: 3px solid #000000;
-
-      border-radius: 50%;
-
-      &_active {
-        background: #000;
-      }
-    }
+    display: none;
   }
 }
 
@@ -178,12 +172,35 @@ export default {
     }
     &__nav {
       display: flex;
+      column-gap: 77px;
+      margin-top: 105px;
     }
     &__next,
     &__prev {
       max-width: 50px;
       &_md {
         display: none;
+      }
+    }
+
+    &__pagination {
+      width: fit-content;
+      display: flex;
+      column-gap: 55px;
+    }
+    ::v-deep {
+      .selection-swiper__bullet {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        border: 3px solid #000000;
+
+        border-radius: 50%;
+
+        &_active {
+          background: #000;
+        }
       }
     }
   }

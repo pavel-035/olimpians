@@ -8,9 +8,9 @@
       align-items-center
       py-3
     ">
-      <div>
+      <div class="header__logo">
         <router-link to="/">
-          <b-img :src="require('/src/assets/images/logo.png')" />
+          <b-img :src="require('/src/assets/images/logo.png')" class="w-100" />
         </router-link>
       </div>
       <div>
@@ -88,16 +88,48 @@ export default {
   }
 
   .header {
+    &__logo {
+      max-width: 90px;
+      width: 100%;
+    }
     &__arrow {
-      max-width: 64px;
+      max-width: 40px;
       width: 100%;
       &_top {
         transform: rotateZ(-180deg);
       }
     }
     &__shop {
-      max-width: 55px;
+      max-width: 34px;
       width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .header {
+      &__logo {
+        max-width: 160px;
+      }
+      &__arrow {
+        max-width: 32px;
+      }
+      &__shop {
+        max-width: 27px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .header {
+      &__logo {
+        max-width: 184px;
+      }
+      &__arrow {
+        max-width: 64px;
+      }
+      &__shop {
+        max-width: 55px;
+      }
     }
   }
 </style>
