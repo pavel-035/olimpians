@@ -1,6 +1,8 @@
 <template>
-  <b-container class="header bg-primary" fluid>
+  <div class="header bg-primary" fluid>
     <div class="
+      app-container
+
       d-flex
       justify-content-between
       align-items-center
@@ -59,7 +61,7 @@
         </b-button>
       </div>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>
