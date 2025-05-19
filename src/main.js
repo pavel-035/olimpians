@@ -4,8 +4,6 @@ import router from './router'
 
 import { BootstrapVue } from 'bootstrap-vue'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '@/assets/styles/fonts.css'
 import '@/assets/styles/main.scss'
 
