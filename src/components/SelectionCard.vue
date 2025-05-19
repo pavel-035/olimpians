@@ -15,7 +15,7 @@
         168 р.
       </span>
       <b-button
-        class="selection-card__button border-dark rounded-0 text-uppercase py-3 px-5"
+        class="selection-card__button border-dark rounded-0 text-uppercase py-lg-3 py-md-3 px-lg-5 px-md-3"
         variant="transparent"
       >
         Купить
@@ -52,6 +52,44 @@ export default {
   &__button {
     font-size: 30px;
     line-height: 45px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .selection-card {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .selection-card {
+    max-width: 100%;
+    margin: 0 auto;
+    &__title {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__price {
+      font-size: 22px;
+      line-height: 33px;
+    }
+
+    &__button {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .selection-card {
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 </style>

@@ -1,31 +1,62 @@
 <template>
   <div class="selection-swiper">
-    <BaseSwiper
-      :slides="[{id: 1}, {id: 2}, {id: 3}, {id: 4}]"
-      :options="{
-        autoplay: {
-          delay: 1000
-        },
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 20,
-        navigation: {
-          nextEl: '.selection-swiper__next',
-          prevEl: '.selection-swiper__prev'
-        },
-        pagination: {
-          el: '.selection-swiper__pagination',
-          bulletClass: 'selection-swiper__bullet',
-          bulletActiveClass: 'selection-swiper__bullet_active'
-        }
-      }"
-    >
-      <template #slide>
-        <SelectionCard />
-      </template>
-    </BaseSwiper>
+    <div class="selection-swiper__wrapper">
+      <div class="selection-swiper__prev selection-swiper__prev_md">
+        <b-button
+          class="p-0"
+          variant="transparent"
+        >
+          <BaseIcon
+            icon="arrow"
+            class="text-dark"
+          />
+        </b-button>
+      </div>
+      <BaseSwiper
+        :slides="[{id: 1}, {id: 2}, {id: 3}, {id: 4}]"
+        :options="{
+          autoplay: {
+            delay: 1000
+          },
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 0,
+          navigation: {
+            nextEl: '.selection-swiper__next',
+            prevEl: '.selection-swiper__prev'
+          },
+          pagination: {
+            el: '.selection-swiper__pagination',
+            bulletClass: 'selection-swiper__bullet',
+            bulletActiveClass: 'selection-swiper__bullet_active'
+          },
+          breakpoints: {
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            }
+          }
+        }"
+        class="selection-swiper__carousel"
+      >
+        <template #slide>
+          <SelectionCard />
+        </template>
+      </BaseSwiper>
+      <div class="selection-swiper__next selection-swiper__next_md">
+        <b-button
+          class="p-0"
+          variant="transparent"
+        >
+          <BaseIcon
+            icon="arrow"
+            class="text-dark"
+          />
+        </b-button>
+      </div>
+    </div>
 
-    <div class="selection-swiper__nav d-flex justify-content-center align-items-center my-5 py-5">
+    <div class="selection-swiper__nav my-5 py-5">
       <div class="selection-swiper__prev">
         <b-button
           class="p-0"
@@ -74,6 +105,11 @@ export default {
     }
   }
 
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__next,
   &__prev {
     max-width: 50px;
@@ -103,6 +139,51 @@ export default {
 
       &_active {
         background: #000;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .selection-swiper {
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 55px;
+    }
+    &__carousel {
+      max-width: 340px;
+    }
+    &__nav {
+      display: none;
+    }
+    &__next,
+    &__prev {
+      &_md {
+        display: block;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .selection-swiper {
+    &__wrapper {
+      display: block;
+    }
+    &__carousel {
+      max-width: 100%;
+    }
+    &__nav {
+      display: flex;
+    }
+    &__next,
+    &__prev {
+      max-width: 50px;
+      &_md {
+        display: none;
       }
     }
   }

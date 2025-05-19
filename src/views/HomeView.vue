@@ -2,9 +2,9 @@
   <div class="home">
     <section class="banner vh-100">
       <div class="app-container py-5" fluid>
-        <h1 class="banner__heading text-white w-50 py-4 mb-4 text-uppercase">Книги, которые вознесут вас на Олимп</h1>
+        <h1 class="banner__heading text-white w-xl-50 w-lg-75 py-xl-4 py-lg-3 mb-4 text-uppercase">Книги, которые вознесут вас на Олимп</h1>
         <b-button
-          class="banner__button border-white rounded-0 py-1 px-5 mt-4 text-uppercase text-white"
+          class="banner__button border-white rounded-0 py-1 px-5 mt-lg-4 mt-md-2 mt-sm-1 text-uppercase text-white"
           variant="transparent"
         >
           Узнать больше
@@ -23,8 +23,8 @@
     <section class="about">
       <div class="app-container" fluid>
         <div class="d-flex justify-content-center">
-          <div class="about__image w-50">
-            <b-img :src="require('/src/assets/images/about_1.png')" class="w-100" />
+          <div class="about__image w-50 overflow-hidden">
+            <b-img :src="require('/src/assets/images/about_1.png')" class="w-100 h-100" />
           </div>
           <div class="w-50 p-5 bg-primary text-white text-center">
             <h2 class="about__heading py-3 m-0 mb-4 text-uppercase">О нас</h2>
@@ -36,8 +36,8 @@
             <h2 class="about__heading py-3 m-0 mb-4 text-uppercase">Гармония</h2>
             <p class="about__paragraph m-0 py-3 raleway-regular">Наш проект «Гармония» объединяет читателей и авторов в реальности и в интернете. Каждую неделю проводятся встречи онлайн и вживую. Из наших регулярных рубрик вы узнаете много нового о книгах и писателях.</p>
           </div>
-          <div class="about__image w-50">
-            <b-img :src="require('/src/assets/images/about_2.png')" class="w-100" />
+          <div class="about__image w-50 overflow-hidden">
+            <b-img :src="require('/src/assets/images/about_2.png')" class="w-100, h-100" />
           </div>
         </div>
       </div>
@@ -130,6 +130,68 @@ export default {
   &__button {
     font-size: 30px;
     line-height: 45px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .banner {
+    &__heading {
+      font-size: 64px;
+      line-height: 96px;
+    }
+    &__button {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  .selection {
+    &__heading {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+
+  .about {
+    &__image {
+      img {
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+    &__heading {
+      font-size: 48px;
+      line-height: 72px;
+    }
+    &__paragraph {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  .subscribe {
+    padding: 140px 0;
+    &__heading {
+      font-size: 30px;
+      line-height: 45px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__form {
+      max-width: 1080px;
+      width: 100%;
+      margin: 40px auto 0;
+    }
+    &__input {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__button {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 }
 </style>
