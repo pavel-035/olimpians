@@ -1,7 +1,7 @@
 <template>
   <b-card class="selection-card border border-dark rounded-0 p-0">
     <b-card-img
-      :src="require('/src/assets/images/book.png')"
+      :src="require('/src/assets/images/book.webp')"
       class="selection-card__img mb-4"
     />
     <b-card-title class="selection-card__title mt-1">

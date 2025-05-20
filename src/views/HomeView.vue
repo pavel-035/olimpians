@@ -24,7 +24,7 @@
       <div class="app-container" fluid>
         <div class="d-flex flex-column-reverse flex-sm-row justify-content-center">
           <div class="about__image w-sm-50 overflow-hidden">
-            <b-img :src="require('/src/assets/images/about_1.png')" class="w-100 h-100" />
+            <b-img :src="require('/src/assets/images/about_1.webp')" class="w-100 h-100" />
           </div>
           <div class="w-sm-50 p-sm-5 p-4 bg-primary text-white text-center">
             <h2 class="about__heading py-sm-3 p-0 m-0 mb-4 text-uppercase">О нас</h2>
@@ -37,7 +37,7 @@
             <p class="about__paragraph m-0 py-sm-3 raleway-regular">Книжное наследие от мыслителей Древней Греции и до людей современности. Это не просто магазин, а настоящий клуб любителей книги, который объединяет в своем культурном пространстве людей самых разных интересов.</p>
           </div>
           <div class="about__image w-sm-50 overflow-hidden">
-            <b-img :src="require('/src/assets/images/about_2.png')" class="w-100 h-100" />
+            <b-img :src="require('/src/assets/images/about_2.webp')" class="w-100 h-100" />
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  background: url("/src/assets/images/banner_background.png") no-repeat 50% 20%/cover;
+  background: url("/src/assets/images/banner_background.webp") no-repeat 50% 20%/cover;
   &__heading {
     font-size: 40px;
     line-height: 60px;
